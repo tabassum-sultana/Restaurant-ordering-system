@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sort Numbers & Text</h1>
+        
+        <div class="input-section">
+            <label for="input">Enter numbers or words (separated by commas):</label>
+            <textarea id="input" placeholder="e.g., 5,2,8,1,9 or apple,banana,cherry"></textarea>
+        </div>
+
+        <div class="button-section">
+            <button onclick="sortAscending()">Sort Ascending</button>
+            <button onclick="sortDescending()">Sort Descending</button>
+            <button onclick="sortAlphabetically()">Sort A-Z</button>
+            <button onclick="clearAll()">Clear</button>
+        </div>
+
+        <div class="output-section">
+            <h2>Sorted Result:</h2>
+            <div id="output" class="output-box"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
