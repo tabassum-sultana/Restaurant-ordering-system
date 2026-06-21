@@ -3,31 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorting Application</title>
+    <title>FoodNest</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Sort Numbers & Text</h1>
-        
-        <div class="input-section">
-            <label for="input">Enter numbers or words (separated by commas):</label>
-            <textarea id="input" placeholder="e.g., 5,2,8,1,9 or apple,banana,cherry"></textarea>
+
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <div class="logo">🍽 FoodNest</div>
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <button class="login-btn">Login</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <div class="content">
+
+            <span class="tag">Fresh & Healthy Food</span>
+
+            <h1>
+                Taste The <br>
+                Best Delicious <span>Food</span>
+            </h1>
+
+            <p>
+                Experience premium quality meals prepared
+                with fresh ingredients and delivered directly
+                to your doorstep.
+            </p>
+
+            <div class="btn-group">
+                <button class="primary">Explore Menu</button>
+                <button class="secondary">Order Now</button>
+            </div>
+
         </div>
 
-        <div class="button-section">
-            <button onclick="sortAscending()">Sort Ascending</button>
-            <button onclick="sortDescending()">Sort Descending</button>
-            <button onclick="sortAlphabetically()">Sort A-Z</button>
-            <button onclick="clearAll()">Clear</button>
+        <div class="hero-image">
+            <div class="placeholder"><img src="assets/plsceholder/hero pizza.jpg"></div>
         </div>
 
-        <div class="output-section">
-            <h2>Sorted Result:</h2>
-            <div id="output" class="output-box"></div>
-        </div>
-    </div>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- Features -->
+
+    <section class="features">
+
+        <div class="feature-card">
+            <h3>🚀 Fast Delivery</h3>
+            <p>Quick and safe delivery service.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>🥬 Organic Food</h3>
+            <p>Fresh and healthy ingredients.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>💳 Easy Payment</h3>
+            <p>Secure online payment system.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>🎧 Support</h3>
+            <p>24/7 customer assistance.</p>
+        </div>
+
+    </section>
+
+    <!-- Categories -->
+
+    <section class="categories">
+
+        <h2>Popular Categories</h2>
+
+        <div class="category-box">
+
+            <div class="category">🍕 Pizza</div>
+            <div class="category">🍔 Burger</div>
+            <div class="category">🍝 Pasta</div>
+            <div class="category">🥗 Salad</div>
+            <div class="category">🍰 Dessert</div>
+            <div class="category">🥤 Drinks</div>
+
+        </div>
+
+    </section>
+
 </body>
 </html>
