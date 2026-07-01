@@ -1,106 +1,348 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FoodNest</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Fooddee landing page — clean food delivery website."
+    />
+    <title>Fooddee — Good Food, Good Life</title>
+    <link rel="icon" type="image/png" href="assets/brand/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="Fooddee home">
+          <img src="assets/brand/logo-mark.png" alt="" class="brand__mark" />
+          <span class="brand__text">
+            <strong>Fooddee</strong>
+            <small>Good Food. Good Life</small>
+          </span>
+        </a>
 
-    <!-- Navbar -->
-    <header>
-        <nav>
-            <div class="logo">🍽 FoodNest</div>
-
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-
-            <button class="login-btn">Login</button>
+        <nav class="nav-links" aria-label="Primary">
+          <a class="active" href="#home">Home</a>
+          <a href="#menu">Menu</a>
+          <a href="#about">About</a>
+          <a href="#orders">Orders</a>
+          <a href="#contact">Contact</a>
         </nav>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+        <div class="header-actions">
+          <label class="search-box" aria-label="Search food">
+            <img src="assets/icons/search.png" alt="" />
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="Search food..."
+            />
+          </label>
+          <button class="cart-button" type="button" aria-label="Open cart">
+            <img src="assets/icons/cart.png" alt="" />
+            <span id="cartCount">2</span>
+          </button>
+          <button class="sign-in" type="button">Sign In</button>
+        </div>
+      </header>
 
-        <div class="content">
+      <main>
+        <section class="hero" id="home">
+          <div class="hero__copy">
+            <div class="eyebrow">
+              <img src="assets/icons/leaf.png" alt="" />
+              <span>Welcome to Fooddee</span>
+              <img src="assets/icons/leaf.png" alt="" />
+            </div>
 
-            <span class="tag">Fresh & Healthy Food</span>
-
-            <h1>
-                Taste The <br>
-                Best Delicious <span>Food</span>
-            </h1>
-
+            <h1>Delicious Food<br />Delivered <span>Fast</span></h1>
             <p>
-                Experience premium quality meals prepared
-                with fresh ingredients and delivered directly
-                to your doorstep.
+              Enjoy your favorite meals from our best menu delivered hot and
+              fresh to your doorstep.
             </p>
 
-            <div class="btn-group">
-                <button class="primary">Explore Menu</button>
-                <button class="secondary">Order Now</button>
+            <div class="hero-buttons">
+              <a class="btn btn--primary" href="#menu">
+                <img src="assets/icons/utensils.png" alt="" />
+                Explore Menu
+              </a>
+              <button
+                class="btn btn--outline"
+                type="button"
+                data-action="order-now"
+              >
+                <img src="assets/icons/scooter.png" alt="" />
+                Order Now
+              </button>
             </div>
+          </div>
 
-        </div>
-
-        <div class="hero-image">
-            <div class="placeholder">
-              <img src="assets/placeholder/hero-plate.png">
+          <div class="hero__visual" aria-label="Healthy chicken rice bowl">
+            <img class="hero__blob" src="assets/decor/beige-blob.png" alt="" />
+            <img
+              class="hero__leaf hero__leaf--left"
+              src="assets/decor/leaf-sprig.png"
+              alt=""
+            />
+            <img
+              class="hero__leaf hero__leaf--right"
+              src="assets/decor/small-plant.png"
+              alt=""
+            />
+            <img
+              class="hero__bowl"
+              src="assets/decor/hero-bowl.png"
+              alt="Grilled chicken rice bowl with vegetables"
+            />
+            <div class="delivery-pill">
+              <img src="assets/icons/clock.png" alt="" />
+              <span
+                ><strong>20–30 Min</strong><small>Fast Delivery</small></span
+              >
             </div>
-        </div>
-        
+          </div>
+        </section>
 
-    </section>
+        <section class="features" id="about" aria-label="Service highlights">
+          <article class="feature-card">
+            <span class="icon-circle"
+              ><img src="assets/icons/truck.png" alt=""
+            /></span>
+            <div>
+              <h3>Fast Delivery</h3>
+              <p>On time, every time</p>
+            </div>
+          </article>
+          <article class="feature-card">
+            <span class="icon-circle icon-circle--orange"
+              ><img src="assets/icons/leaf.png" alt=""
+            /></span>
+            <div>
+              <h3>Fresh Ingredients</h3>
+              <p>100% quality food</p>
+            </div>
+          </article>
+          <article class="feature-card">
+            <span class="icon-circle"
+              ><img src="assets/icons/shield.png" alt=""
+            /></span>
+            <div>
+              <h3>Secure Payment</h3>
+              <p>Safe & secure</p>
+            </div>
+          </article>
+          <article class="feature-card">
+            <span class="icon-circle icon-circle--orange"
+              ><img src="assets/icons/headset.png" alt=""
+            /></span>
+            <div>
+              <h3>24/7 Support</h3>
+              <p>We're here for you</p>
+            </div>
+          </article>
+        </section>
 
-    <!-- Features -->
-    <section class="features">
+        <section class="section" id="menu">
+          <div class="section-heading">
+            <h2>Popular Categories</h2>
+            <a href="#menu"
+              >View All <img src="assets/icons/arrow-right.png" alt=""
+            /></a>
+          </div>
 
-        <div class="feature-card">
-            <h3>🚀 Fast Delivery</h3>
-            <p>Quick and safe delivery service.</p>
-        </div>
+          <div class="category-grid">
+            <button class="category-card" type="button" data-category="Pizza">
+              <img src="assets/food/categories/pizza.png" alt="" /><span
+                >Pizza</span
+              >
+            </button>
+            <button class="category-card" type="button" data-category="Burger">
+              <img src="assets/food/categories/burger.png" alt="" /><span
+                >Burger</span
+              >
+            </button>
+            <button class="category-card" type="button" data-category="Pasta">
+              <img src="assets/food/categories/pasta.png" alt="" /><span
+                >Pasta</span
+              >
+            </button>
+            <button class="category-card" type="button" data-category="Drinks">
+              <img src="assets/food/categories/drinks.png" alt="" /><span
+                >Drinks</span
+              >
+            </button>
+            <button class="category-card" type="button" data-category="Dessert">
+              <img src="assets/food/categories/dessert.png" alt="" /><span
+                >Dessert</span
+              >
+            </button>
+            <button class="category-card" type="button" data-category="Salad">
+              <img src="assets/food/categories/salad.png" alt="" /><span
+                >Salad</span
+              >
+            </button>
+          </div>
+        </section>
 
-        <div class="feature-card">
-            <h3>🥬 Organic Food</h3>
-            <p>Fresh and healthy ingredients.</p>
-        </div>
+        <section class="section" id="orders">
+          <div class="section-heading">
+            <h2>Popular Dishes</h2>
+            <a href="#menu"
+              >View All <img src="assets/icons/arrow-right.png" alt=""
+            /></a>
+          </div>
 
-        <div class="feature-card">
-            <h3>💳 Easy Payment</h3>
-            <p>Secure online payment system.</p>
-        </div>
+          <div class="dish-grid" id="dishGrid">
+            <article
+              class="dish-card"
+              data-name="Margherita Pizza"
+              data-category="Pizza"
+            >
+              <img
+                src="assets/food/dishes/margherita-pizza.png"
+                alt="Margherita Pizza"
+              />
+              <div class="dish-card__body">
+                <h3>Margherita Pizza</h3>
+                <p><img src="assets/icons/star.png" alt="" />4.6 (120)</p>
+                <div>
+                  <strong>$10.99</strong
+                  ><button type="button" class="add-to-cart">
+                    <img src="assets/icons/plus.png" alt="Add" />
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article
+              class="dish-card"
+              data-name="Cheese Burger"
+              data-category="Burger"
+            >
+              <img
+                src="assets/food/dishes/cheese-burger.png"
+                alt="Cheese Burger"
+              />
+              <div class="dish-card__body">
+                <h3>Cheese Burger</h3>
+                <p><img src="assets/icons/star.png" alt="" />4.7 (98)</p>
+                <div>
+                  <strong>$8.99</strong
+                  ><button type="button" class="add-to-cart">
+                    <img src="assets/icons/plus.png" alt="Add" />
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article
+              class="dish-card"
+              data-name="Creamy Pasta"
+              data-category="Pasta"
+            >
+              <img
+                src="assets/food/dishes/creamy-pasta.png"
+                alt="Creamy Pasta"
+              />
+              <div class="dish-card__body">
+                <h3>Creamy Pasta</h3>
+                <p><img src="assets/icons/star.png" alt="" />4.5 (76)</p>
+                <div>
+                  <strong>$9.49</strong
+                  ><button type="button" class="add-to-cart">
+                    <img src="assets/icons/plus.png" alt="Add" />
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article
+              class="dish-card"
+              data-name="Iced Coffee"
+              data-category="Drinks"
+            >
+              <img src="assets/food/dishes/iced-coffee.png" alt="Iced Coffee" />
+              <div class="dish-card__body">
+                <h3>Iced Coffee</h3>
+                <p><img src="assets/icons/star.png" alt="" />4.6 (64)</p>
+                <div>
+                  <strong>$3.49</strong
+                  ><button type="button" class="add-to-cart">
+                    <img src="assets/icons/plus.png" alt="Add" />
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article
+              class="dish-card"
+              data-name="Chocolate Cake"
+              data-category="Dessert"
+            >
+              <img
+                src="assets/food/dishes/chocolate-cake.png"
+                alt="Chocolate Cake"
+              />
+              <div class="dish-card__body">
+                <h3>Chocolate Cake</h3>
+                <p><img src="assets/icons/star.png" alt="" />4.8 (55)</p>
+                <div>
+                  <strong>$4.49</strong
+                  ><button type="button" class="add-to-cart">
+                    <img src="assets/icons/plus.png" alt="Add" />
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article
+              class="dish-card"
+              data-name="Caesar Salad"
+              data-category="Salad"
+            >
+              <img
+                src="assets/food/dishes/caesar-salad.png"
+                alt="Caesar Salad"
+              />
+              <div class="dish-card__body">
+                <h3>Caesar Salad</h3>
+                <p><img src="assets/icons/star.png" alt="" />4.4 (40)</p>
+                <div>
+                  <strong>$6.49</strong
+                  ><button type="button" class="add-to-cart">
+                    <img src="assets/icons/plus.png" alt="Add" />
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
 
-        <div class="feature-card">
-            <h3>🎧 Support</h3>
-            <p>24/7 customer assistance.</p>
-        </div>
+        <section class="offer-bar" id="contact">
+          <div class="offer-copy">
+            <span><img src="assets/icons/success.png" alt="" /></span>
+            <div>
+              <h2>Get Special Offers</h2>
+              <p>Subscribe to our newsletter</p>
+            </div>
+          </div>
+          <form class="subscribe-form" id="subscribeForm">
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit">
+              Subscribe <img src="assets/icons/send.png" alt="" />
+            </button>
+          </form>
+          <div class="stats">
+            <div><strong>500+</strong><span>Happy Customers</span></div>
+            <div><strong>100+</strong><span>Daily Orders</span></div>
+            <div><strong>50+</strong><span>Best Chefs</span></div>
+          </div>
+        </section>
+      </main>
+    </div>
 
-    </section>
-
-    <!-- Categories -->
-    <section class="categories">
-
-        <h2>Popular Categories</h2>
-
-        <div class="category-box">
-
-            <div class="category">🍕 Pizza</div>
-            <div class="category">🍔 Burger</div>
-            <div class="category">🍝 Pasta</div>
-            <div class="category">🥗 Salad</div>
-            <div class="category">🍰 Dessert</div>
-            <div class="category">🥤 Drinks</div>
-
-        </div>
-
-    </section>
-
-</body>
+    <script src="js/main.js"></script>
+  </body>
 </html>
