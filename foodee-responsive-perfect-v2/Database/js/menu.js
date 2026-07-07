@@ -5,13 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(location.search);
   let currentCategory = params.get("category") || "All";
   let query = params.get("q") || "";
-  let wishlistOnly = params.get("wishlist") === "1";
   if (search) search.value = query;
-
-  function savedWishlist() {
-    try { return JSON.parse(localStorage.getItem("foodee-wishlist")) || []; }
-    catch { return []; }
-  }
 
   function renderTabs() {
     if (!tabs) return;
@@ -23,15 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderProducts() {
     if (!grid) return;
     const q = query.toLowerCase();
-    const saved = savedWishlist();
     const products = FoodeeData.products.filter((product) => {
       const byCat = currentCategory === "All" || product.category === currentCategory;
       const byQuery = !q || `${product.name} ${product.category} ${product.desc}`.toLowerCase().includes(q);
-      const byWishlist = !wishlistOnly || saved.includes(product.id);
-      return byCat && byQuery && byWishlist;
+      return byCat && byQuery;
     });
-    grid.innerHTML = products.length ? products.map(productCard).join("") : `<div class="empty-state">${wishlistOnly ? "No wishlist items yet." : "No dishes found."}</div>`;
-    window.FoodeeWishlistRefresh?.();
+    grid.innerHTML = products.length ? products.map(productCard).join("") : `<div class="empty-state">No dishes found.</div>`;
   }
 
   renderTabs();
@@ -39,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
   tabs?.addEventListener("click", (event) => {
     const button = event.target.closest(".menu-tab");
     if (!button) return;
-    wishlistOnly = false;
     currentCategory = button.dataset.category;
     renderTabs();
     renderProducts();

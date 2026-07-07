@@ -4,17 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const product = FoodeeCart.product(id) || FoodeeCart.product("burger");
   const related = document.querySelector("#relatedProducts");
   const addButton = document.querySelector("#detailAddCart");
-  const wishlistButton = document.querySelector("#detailWishlist");
-  const qtyControl = document.querySelector(".product-actions .qty-control");
-  const qtyButtons = qtyControl ? qtyControl.querySelectorAll("button") : [];
-  const qtyValue = qtyControl ? qtyControl.querySelector("span") : null;
-  let detailQty = 1;
-
-  function setDetailQty(nextQty) {
-    detailQty = Math.max(1, Number(nextQty) || 1);
-    if (qtyValue) qtyValue.textContent = detailQty;
-    if (addButton) addButton.dataset.addQty = String(detailQty);
-  }
 
   document.querySelectorAll("[data-product-name]").forEach((el) => el.textContent = product.name);
   document.querySelectorAll("[data-product-price]").forEach((el) => el.textContent = FoodeeCart.money(product.price));
@@ -32,16 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     productThumb.alt = product.name;
   }
   addButton?.setAttribute("data-add-cart", product.id);
-  wishlistButton?.setAttribute("data-wishlist", product.id);
-  setDetailQty(1);
   if (related) related.innerHTML = FoodeeData.products.filter((item) => item.id !== product.id).slice(0, 4).map(productCard).join("");
-  window.FoodeeWishlistRefresh?.();
-
-  qtyButtons.forEach((button, index) => {
-    button.addEventListener("click", () => {
-      setDetailQty(detailQty + (index === 0 ? -1 : 1));
-    });
-  });
 
   document.querySelectorAll(".thumb").forEach((thumb) => {
     thumb.addEventListener("click", () => {
