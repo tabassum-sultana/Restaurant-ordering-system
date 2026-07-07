@@ -7,7 +7,7 @@ window.FoodeeData = {
       "price": 249,
       "rating": 4.6,
       "reviews": 128,
-      "image": "assets/menu-items/foodee-burger.png",
+      "image": "assets/food/menu-items/foodee-burger.png",
       "desc": "Juicy grilled patty with cheese, lettuce, tomato and house sauce."
     },
     {
@@ -17,7 +17,7 @@ window.FoodeeData = {
       "price": 329,
       "rating": 4.8,
       "reviews": 166,
-      "image": "assets/menu-items/double-burger.png",
+      "image": "assets/food/menu-items/double-burger.png",
       "desc": "Double beef patty, melted cheese and spicy house sauce."
     },
     {
@@ -27,7 +27,7 @@ window.FoodeeData = {
       "price": 269,
       "rating": 4.5,
       "reviews": 93,
-      "image": "assets/menu-items/crispy-chicken-burger.png",
+      "image": "assets/food/menu-items/crispy-chicken-burger.png",
       "desc": "Crunchy chicken fillet with lettuce and creamy sauce."
     },
     {
@@ -37,7 +37,7 @@ window.FoodeeData = {
       "price": 219,
       "rating": 4.4,
       "reviews": 84,
-      "image": "assets/menu-items/classic-burger.png",
+      "image": "assets/food/menu-items/classic-burger.png",
       "desc": "Classic beef burger with fresh salad and soft bun."
     },
     {
@@ -47,7 +47,7 @@ window.FoodeeData = {
       "price": 449,
       "rating": 4.8,
       "reviews": 142,
-      "image": "assets/menu-items/supreme-pizza.png",
+      "image": "assets/food/menu-items/supreme-pizza.png",
       "desc": "Loaded pizza with olives, peppers, onion and mozzarella."
     },
     {
@@ -57,7 +57,7 @@ window.FoodeeData = {
       "price": 399,
       "rating": 4.7,
       "reviews": 117,
-      "image": "assets/menu-items/pepperoni-pizza.png",
+      "image": "assets/food/menu-items/pepperoni-pizza.png",
       "desc": "Crispy crust, melted cheese and spicy pepperoni."
     },
     {
@@ -67,7 +67,7 @@ window.FoodeeData = {
       "price": 349,
       "rating": 4.5,
       "reviews": 89,
-      "image": "assets/menu-items/margherita-pizza.png",
+      "image": "assets/food/menu-items/margherita-pizza.png",
       "desc": "Fresh tomato sauce, basil and mozzarella cheese."
     },
     {
@@ -77,7 +77,7 @@ window.FoodeeData = {
       "price": 379,
       "rating": 4.4,
       "reviews": 76,
-      "image": "assets/menu-items/mushroom-pizza.png",
+      "image": "assets/food/menu-items/mushroom-pizza.png",
       "desc": "Creamy mushroom topping with golden baked cheese."
     },
     {
@@ -87,7 +87,7 @@ window.FoodeeData = {
       "price": 279,
       "rating": 4.7,
       "reviews": 112,
-      "image": "assets/menu-items/foodee-pasta.png",
+      "image": "assets/food/menu-items/foodee-pasta.png",
       "desc": "Rich white sauce pasta with herbs and cheese."
     },
     {
@@ -97,7 +97,7 @@ window.FoodeeData = {
       "price": 299,
       "rating": 4.6,
       "reviews": 104,
-      "image": "assets/menu-items/creamy-ramen.png",
+      "image": "assets/food/menu-items/creamy-ramen.png",
       "desc": "Warm creamy ramen with egg, chicken and vegetables."
     },
     {
@@ -107,7 +107,7 @@ window.FoodeeData = {
       "price": 319,
       "rating": 4.7,
       "reviews": 91,
-      "image": "assets/menu-items/spicy-ramen.png",
+      "image": "assets/food/menu-items/spicy-ramen.png",
       "desc": "Spicy broth, noodles, egg and grilled chicken slices."
     },
     {
@@ -117,7 +117,7 @@ window.FoodeeData = {
       "price": 289,
       "rating": 4.5,
       "reviews": 80,
-      "image": "assets/menu-items/spicy-noodle-bowl.png",
+      "image": "assets/food/menu-items/spicy-noodle-bowl.png",
       "desc": "Hot noodle bowl with deep flavor and fresh garnish."
     },
     {
@@ -127,7 +127,7 @@ window.FoodeeData = {
       "price": 299,
       "rating": 4.6,
       "reviews": 104,
-      "image": "assets/menu-items/foodee-chicken.png",
+      "image": "assets/food/menu-items/foodee-chicken.png",
       "desc": "Crispy juicy chicken with warm spices."
     },
     {
@@ -137,7 +137,7 @@ window.FoodeeData = {
       "price": 259,
       "rating": 4.5,
       "reviews": 88,
-      "image": "assets/menu-items/bbq-wings.png",
+      "image": "assets/food/menu-items/bbq-wings.png",
       "desc": "Smoky wings tossed with sweet BBQ glaze."
     },
     {
@@ -147,7 +147,7 @@ window.FoodeeData = {
       "price": 189,
       "rating": 4.3,
       "reviews": 68,
-      "image": "assets/menu-items/chicken-nuggets.png",
+      "image": "assets/food/menu-items/chicken-nuggets.png",
       "desc": "Golden bite-size nuggets with dipping sauce."
     },
     {
@@ -167,7 +167,7 @@ window.FoodeeData = {
       "price": 179,
       "rating": 4.5,
       "reviews": 92,
-      "image": "assets/menu-items/foodee-salad.png",
+      "image": "assets/food/menu-items/foodee-salad.png",
       "desc": "Fresh greens, tomato, cucumber and soft cheese."
     },
     {
@@ -177,7 +177,7 @@ window.FoodeeData = {
       "price": 219,
       "rating": 4.6,
       "reviews": 73,
-      "image": "assets/menu-items/green-smoothie.png",
+      "image": "assets/food/menu-items/green-smoothie.png",
       "desc": "Fresh bowl with crunchy greens and clean flavor."
     },
     {
@@ -187,7 +187,7 @@ window.FoodeeData = {
       "price": 149,
       "rating": 4.7,
       "reviews": 77,
-      "image": "assets/menu-items/lime-mojito-premium.png",
+      "image": "assets/food/menu-items/lime-mojito-premium.png",
       "desc": "Refreshing lime drink with mint and ice."
     },
     {
@@ -197,7 +197,7 @@ window.FoodeeData = {
       "price": 169,
       "rating": 4.5,
       "reviews": 61,
-      "image": "assets/menu-items/mango-passion.png",
+      "image": "assets/food/menu-items/mango-passion.png",
       "desc": "Bright mango drink with tropical passion flavor."
     },
     {
@@ -207,7 +207,7 @@ window.FoodeeData = {
       "price": 189,
       "rating": 4.6,
       "reviews": 82,
-      "image": "assets/menu-items/chocolate-shake.png",
+      "image": "assets/food/menu-items/chocolate-shake.png",
       "desc": "Thick chocolate shake topped with whipped cream."
     },
     {
@@ -217,7 +217,7 @@ window.FoodeeData = {
       "price": 179,
       "rating": 4.4,
       "reviews": 55,
-      "image": "assets/menu-items/berry-mocktail.png",
+      "image": "assets/food/menu-items/berry-mocktail.png",
       "desc": "Fruity berry drink with mint and crushed ice."
     },
     {
@@ -227,7 +227,7 @@ window.FoodeeData = {
       "price": 199,
       "rating": 4.8,
       "reviews": 135,
-      "image": "assets/menu-items/chocolate-cake-premium.png",
+      "image": "assets/food/menu-items/chocolate-cake-premium.png",
       "desc": "Moist chocolate cake with rich ganache."
     },
     {
@@ -237,7 +237,7 @@ window.FoodeeData = {
       "price": 229,
       "rating": 4.6,
       "reviews": 99,
-      "image": "assets/menu-items/strawberry-cheesecake.png",
+      "image": "assets/food/menu-items/strawberry-cheesecake.png",
       "desc": "Creamy cheesecake topped with strawberry glaze."
     },
     {
@@ -247,7 +247,7 @@ window.FoodeeData = {
       "price": 249,
       "rating": 4.7,
       "reviews": 88,
-      "image": "assets/menu-items/blueberry-cheesecake.png",
+      "image": "assets/food/menu-items/blueberry-cheesecake.png",
       "desc": "Premium blueberry cheesecake with soft cream."
     },
     {
@@ -257,7 +257,7 @@ window.FoodeeData = {
       "price": 239,
       "rating": 4.5,
       "reviews": 74,
-      "image": "assets/menu-items/tiramisu-cake.png",
+      "image": "assets/food/menu-items/tiramisu-cake.png",
       "desc": "Soft coffee cream cake with chocolate layers."
     },
     {
@@ -267,7 +267,7 @@ window.FoodeeData = {
       "price": 159,
       "rating": 4.4,
       "reviews": 51,
-      "image": "assets/menu-items/cream-soup.png",
+      "image": "assets/food/menu-items/cream-soup.png",
       "desc": "Warm creamy soup made fresh and served smooth."
     },
     {
@@ -277,7 +277,7 @@ window.FoodeeData = {
       "price": 149,
       "rating": 4.3,
       "reviews": 49,
-      "image": "assets/menu-items/corn-soup.png",
+      "image": "assets/food/menu-items/corn-soup.png",
       "desc": "Comforting corn soup with light herbs."
     },
     {
@@ -287,7 +287,7 @@ window.FoodeeData = {
       "price": 149,
       "rating": 4.4,
       "reviews": 45,
-      "image": "assets/menu-items/tomato-soup.png",
+      "image": "assets/food/menu-items/tomato-soup.png",
       "desc": "Rich tomato soup with fresh basil flavor."
     }
   ],

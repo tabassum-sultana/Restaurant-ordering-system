@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -7,7 +7,8 @@
   <title>Your Cart - Foodee</title>
   <meta name="description" content="Foodee delivers fresh meals in Bangladesh fast." />
   <link rel="icon" type="image/png" href="assets/brand/logo-mark.png" />
-  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/cart.css" />
 </head>
 <body data-page="cart">
 <header class="site-header">
@@ -15,13 +16,13 @@
     <a class="brand" href="index.html" aria-label="Foodee home"><img src="assets/brand/logo.png" alt="Foodee" /></a>
     <nav class="nav-links" aria-label="Primary navigation">
       <a href="index.html">Home</a>
-      <a href="HTML/menu.html">Menu</a>
-      <a href="HTML/about.html">About</a>
-      <a href="HTML/contact.html">Contact</a>
+      <a href="html/menu.html">Menu</a>
+      <a href="html/about.html">About</a>
+      <a href="html/contact.html">Contact</a>
     </nav>
     <div class="header-actions">
       <label class="search-box" aria-label="Search food"><span class="search-icon" aria-hidden="true"></span><input id="globalSearch" type="search" placeholder="Search for food..." /></label>
-      <a class="cart-button" href="HTML/cart.html" aria-label="Open cart"><img src="assets/icons/cart.png" alt="" /><span data-cart-count>0</span></a>
+      <a class="cart-button" href="html/cart.html" aria-label="Open cart"><img src="assets/icons/cart.png" alt="" /><span data-cart-count>0</span></a>
       <button class="sign-in" type="button" data-open-auth><img src="assets/icons/user.png" alt="" />Sign In</button>
     </div>
   </div>
@@ -34,12 +35,12 @@
       <h1>Your Cart</h1>
       <p>Review your items and proceed to checkout.</p>
     </div>
-    <figure class="hero-image cart-hero-image"><img src="assets/hero/product-chicken-combo.png" alt="Foodee crispy chicken combo" /></figure>
+    <figure class="hero-image cart-hero-image"><img src="assets/food/combos/product-chicken-combo.png" alt="Foodee crispy chicken combo" /></figure>
   </section>
   <section class="cart-layout shell">
     <div>
       <div class="cart-panel"><div class="cart-items" id="cartItems"></div></div>
-      <a class="btn btn-outline cart-back" href="HTML/menu.html">‹ Continue Shopping</a>
+      <a class="btn btn-outline cart-back" href="html/menu.html">â€¹ Continue Shopping</a>
     </div>
     <aside class="summary-card">
       <h2>Order Summary</h2>
@@ -48,7 +49,7 @@
       <div class="summary-line"><span>Discount</span><strong id="cartDiscount">- BDT 0</strong></div>
       <div class="total-line"><span>Total</span><strong id="cartTotal">BDT 0</strong></div>
       <div class="promo-row"><input type="text" placeholder="Enter promo code" /><button type="button">Apply</button></div>
-      <a class="btn btn-primary" href="HTML/checkout.html"><img src="assets/icons/lock.png" alt="" />Proceed to Checkout</a>
+      <a class="btn btn-primary" href="html/checkout.html"><img src="assets/icons/lock.png" alt="" />Proceed to Checkout</a>
       <p class="safe-note"><img src="assets/icons/shield-check.png" alt="" />Secure checkout. Your data is safe with us.</p>
     </aside>
   </section>

@@ -1,5 +1,5 @@
 ﻿function asset(path) { return path; }
-function page(path) { return `HTML/${path}`; }
+function page(path) { return `html/${path}`; }
 function home() { return "index.html"; }
 
 function showToast(message) {
