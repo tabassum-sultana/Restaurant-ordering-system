@@ -11,6 +11,44 @@ function showToast(message) {
   showToast.timer = setTimeout(() => toast.classList.remove("show"), 1600);
 }
 
+const wishlistKey = "foodee-wishlist";
+
+function readWishlist() {
+  try { return JSON.parse(localStorage.getItem(wishlistKey)) || []; }
+  catch { return []; }
+}
+
+function writeWishlist(items) {
+  localStorage.setItem(wishlistKey, JSON.stringify([...new Set(items)]));
+  refreshWishlistButtons();
+}
+
+function isWishlisted(id) {
+  return readWishlist().includes(id);
+}
+
+function toggleWishlist(id) {
+  if (!id) return false;
+  const items = readWishlist();
+  const exists = items.includes(id);
+  writeWishlist(exists ? items.filter((item) => item !== id) : [...items, id]);
+  return !exists;
+}
+
+function refreshWishlistButtons() {
+  const items = readWishlist();
+  document.querySelectorAll("[data-wishlist]").forEach((button) => {
+    const active = items.includes(button.dataset.wishlist);
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+  document.querySelectorAll("[data-wishlist-count]").forEach((node) => {
+    node.textContent = items.length;
+  });
+}
+
+window.FoodeeWishlistRefresh = refreshWishlistButtons;
+
 function heroArt(extraClass = "") {
   return `
     <div class="hero-art ${extraClass}" aria-label="Burger, fries and lime cooler">
@@ -107,9 +145,10 @@ function mountAuth() {
 }
 
 function productCard(product) {
+  const saved = isWishlisted(product.id);
   return `
     <article class="product-card" data-id="${product.id}">
-      <button class="wish-btn" type="button" aria-label="Save ${product.name}"><img src="${asset("assets/icons/heart.png")}" alt="" /></button>
+      <button class="wish-btn${saved ? " active" : ""}" type="button" data-wishlist="${product.id}" aria-pressed="${saved}" aria-label="Save ${product.name}"><img src="${asset("assets/icons/heart.png")}" alt="" /></button>
       <a class="product-image-link" href="${page(`product.html?id=${product.id}`)}" aria-label="View ${product.name}">
         <img class="product-image" src="${asset(product.image)}" alt="${product.name}" />
       </a>
@@ -144,6 +183,16 @@ function headerSearch() {
   });
 }
 
+function mountWishlistNav() {
+  const cartButton = document.querySelector(".cart-button");
+  if (!cartButton || document.querySelector(".wishlist-nav-button")) return;
+  cartButton.insertAdjacentHTML("afterend", `
+    <a class="wishlist-nav-button" href="${page("menu.html?wishlist=1")}" aria-label="Open wishlist">
+      <img src="${asset("assets/icons/heart.png")}" alt="" />
+      <span data-wishlist-count>0</span>
+    </a>`);
+}
+
 function openAuth(showSignUp = false) {
   const modal = document.querySelector("#authModal");
   if (!modal) return;
@@ -163,14 +212,23 @@ function initSite() {
   FoodeeCart.ensureDemoCart();
   mountFooter();
   mountAuth();
+  mountWishlistNav();
   FoodeeCart.updateCount();
+  refreshWishlistButtons();
   headerSearch();
 
   document.querySelectorAll("[data-open-auth]").forEach((button) => button.addEventListener("click", () => openAuth(false)));
   document.addEventListener("click", (event) => {
+    const wish = event.target.closest("[data-wishlist]");
+    if (wish) {
+      const saved = toggleWishlist(wish.dataset.wishlist);
+      showToast(saved ? "Added to wishlist" : "Removed from wishlist");
+      return;
+    }
     const add = event.target.closest("[data-add-cart]");
     if (add) {
-      FoodeeCart.add(add.dataset.addCart);
+      const qty = Math.max(1, Number(add.dataset.addQty) || 1);
+      FoodeeCart.add(add.dataset.addCart, qty);
       showToast("Added to cart");
     }
     if (event.target.matches("[data-close-auth]") || event.target.id === "authModal") closeAuth();
