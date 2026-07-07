@@ -3,203 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fooddee &mdash; Good Food, Good Life</title>
-  <meta name="description" content="Fresh meals, fast delivery, and easy ordering with Fooddee." />
-  <link rel="icon" type="image/png" href="assets/brand/favicon.png" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <title>Fooddee - Fresh. Fast. Fooddee.</title>
+  <meta name="description" content="Fooddee delivers fresh meals from top restaurants fast." />
+  <link rel="icon" type="image/png" href="assets/brand/logo-mark.png" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/home.css" />
 </head>
-<body>
-  <main class="page-shell">
-    <header class="site-header">
-      <a class="brand" href="#home" aria-label="Fooddee home"><img src="assets/brand/full-logo.png" alt="Fooddee" /></a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#home" class="active">Home</a>
-        <a href="#menu">Menu</a>
-        <a href="#about">About</a>
-        <a href="#orders">Orders</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="header-actions">
-        <label class="search-box" aria-label="Search food">
-          <img src="assets/icons/search-icon.png" alt="" />
-          <input id="foodSearch" type="search" placeholder="Search food..." />
-        </label>
-        <button class="cart-button" type="button" aria-label="Cart">
-          <img src="assets/icons/cart-badge-icon.png" alt="" />
-          <span id="cartCount">2</span>
-        </button>
-        <button class="sign-in" type="button">Sign In</button>
-      </div>
-    </header>
+<body data-page="home">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Fooddee home"><img src="assets/brand/logo.png" alt="Fooddee" /></a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a class="active" href="index.html">Home</a>
+      <a href="HTML/menu.html">Menu</a>
+      <a href="HTML/about.html">About</a>
+      <a href="HTML/contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <label class="search-box" aria-label="Search food"><span aria-hidden="true"></span><input id="globalSearch" type="search" placeholder="Search for food..." /></label>
+      <a class="cart-button" href="HTML/cart.html" aria-label="Open cart"><img src="assets/icons/cart.png" alt="" /><span data-cart-count>0</span></a>
+      <button class="sign-in" type="button" data-open-auth><img src="assets/icons/user.png" alt="" />Sign In</button>
+    </div>
+  </header>
 
-    <section class="hero" id="home">
+  <main>
+    <section class="hero page-shell">
       <div class="hero-copy">
-        <img class="decor-dots" src="assets/decor/orange-dot-pattern.png" alt="" />
-        <p class="eyebrow"><img src="assets/decor/leaf-sprig-small.png" alt="" /><span>Welcome to Fooddee</span><img src="assets/decor/leaf-sprig-small.png" alt="" /></p>
-        <h1>Delicious Food<br />Delivered <span>Fast</span></h1>
-        <p class="hero-text">Enjoy your favorite meals from our best menu delivered hot and fresh to your doorstep.</p>
-        <div class="hero-buttons">
-          <a class="btn btn-primary" href="#menu"><img src="assets/icons/utensils.png" alt="" />Explore Menu</a>
-          <a class="btn btn-secondary" href="#orders"><img src="assets/icons/order-scooter.png" alt="" />Order Now</a>
+        <p class="eyebrow"><img src="assets/decor/tiny-leaf.png" alt="" />Fresh. Fast. Fooddee.</p>
+        <h1>Delicious food,<br />delivered to <span>you</span></h1>
+        <p>Order your favorite meals from top restaurants and enjoy fast delivery at your doorstep.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="HTML/menu.html"><img src="assets/icons/delivery-scooter.png" alt="" />Order Now</a>
+          <a class="btn btn-secondary" href="HTML/menu.html"><img src="assets/icons/fresh-leaf.png" alt="" />Explore Menu</a>
         </div>
       </div>
-      <div class="hero-visual" aria-label="Fresh food bowl">
-        <div class="hero-blob"></div>
-        <img class="leaf leaf-left" src="assets/decor/leaf-sprig-large.png" alt="" />
-        <img class="leaf leaf-right" src="assets/decor/leaf-sprig-large.png" alt="" />
-        <img class="hero-bowl" src="assets/decor/hero-food-bowl.png" alt="Healthy grain bowl with grilled chicken" />
-        <div class="delivery-card"><img src="assets/icons/delivery-time-clock.png" alt="" /><div><strong>20-30 Min</strong><span>Fast Delivery</span></div></div>
+      <div class="hero-food-art" aria-label="Burger, fries and lime cooler">
+        <img class="art-blob" src="assets/decor/green-blob.png" alt="" />
+        <img class="art-fries" src="assets/food/hero/hero-fries.png" alt="" />
+        <img class="art-burger" src="assets/food/hero/hero-burger.png" alt="Cheese burger" />
+        <img class="art-drink" src="assets/food/hero/hero-drink.png" alt="Lime mint cooler" />
       </div>
     </section>
 
-    <section class="features" aria-label="Service benefits">
-      <article class="feature-card"><div class="feature-icon green"><img src="assets/icons/fast-delivery-truck.png" alt="" /></div><div><h3>Fast Delivery</h3><p>On time, every time</p></div></article>
-      <article class="feature-card"><div class="feature-icon warm"><img src="assets/icons/fresh-ingredients-leaf.png" alt="" /></div><div><h3>Fresh Ingredients</h3><p>100% quality food</p></div></article>
-      <article class="feature-card"><div class="feature-icon green"><img src="assets/icons/secure-payment-shield.png" alt="" /></div><div><h3>Secure Payment</h3><p>Safe &amp; secure</p></div></article>
-      <article class="feature-card last"><div class="feature-icon warm"><img src="assets/icons/support-headset.png" alt="" /></div><div><h3>24/7 Support</h3><p>We're here for you</p></div></article>
+    <section class="service-strip page-shell" aria-label="Fooddee benefits">
+      <article><img src="assets/icons/delivery-fast.png" alt="" /><div><h3>Fast Delivery</h3><p>Quick delivery to your doorstep</p></div></article>
+      <article><img src="assets/icons/fresh-leaf.png" alt="" /><div><h3>Fresh Ingredients</h3><p>Made with quality and fresh ingredients</p></div></article>
+      <article><img src="assets/icons/safe-secure.png" alt="" /><div><h3>Safe & Secure</h3><p>Hygienic packaging you can trust</p></div></article>
+      <article><img src="assets/icons/support-247.png" alt="" /><div><h3>24/7 Support</h3><p>We're here to help you anytime</p></div></article>
     </section>
 
-    <section class="section" id="menu">
-      <div class="section-head"><h2>Popular Categories</h2><a href="#menu">View All <img src="assets/icons/view-arrow.png" alt="" /></a></div>
-      <div class="category-grid" id="categoryGrid">
-        <button class="category-card active" data-category="all"><img src="assets/food/categories/pizza.png" alt="" /><span>Pizza</span></button>
-        <button class="category-card" data-category="burger"><img src="assets/food/categories/burger.png" alt="" /><span>Burger</span></button>
-        <button class="category-card" data-category="pasta"><img src="assets/food/categories/pasta.png" alt="" /><span>Pasta</span></button>
-        <button class="category-card" data-category="drinks"><img src="assets/food/categories/drinks.png" alt="" /><span>Drinks</span></button>
-        <button class="category-card" data-category="dessert"><img src="assets/food/categories/dessert.png" alt="" /><span>Dessert</span></button>
-        <button class="category-card" data-category="salad"><img src="assets/food/categories/salad.png" alt="" /><span>Salad</span></button>
-      </div>
+    <section class="section page-shell">
+      <div class="section-head"><h2>Browse by Category</h2><a href="HTML/menu.html">View all &rsaquo;</a></div>
+      <div class="category-grid" id="homeCategories"></div>
     </section>
 
-    <section class="section dishes-section" id="orders">
-      <div class="section-head"><h2>Popular Dishes</h2><a href="#orders">View All <img src="assets/icons/view-arrow.png" alt="" /></a></div>
-      <div class="dish-grid" id="dishGrid">
-        <article class="dish-card" data-category="pizza" data-name="margherita pizza"><img src="assets/food/dishes/margherita-pizza.png" alt="Margherita Pizza" /><div class="dish-info"><h3>Margherita Pizza</h3><p><img src="assets/icons/star-rating.png" alt="" />4.6 (120)</p><div><strong>$10.99</strong><button class="add-btn" aria-label="Add Margherita Pizza"><img src="assets/icons/plus-icon.png" alt="" /></button></div></div></article>
-        <article class="dish-card" data-category="burger" data-name="cheese burger"><img src="assets/food/dishes/cheese-burger.png" alt="Cheese Burger" /><div class="dish-info"><h3>Cheese Burger</h3><p><img src="assets/icons/star-rating.png" alt="" />4.7 (98)</p><div><strong>$8.99</strong><button class="add-btn" aria-label="Add Cheese Burger"><img src="assets/icons/plus-icon.png" alt="" /></button></div></div></article>
-        <article class="dish-card" data-category="pasta" data-name="creamy pasta"><img src="assets/food/dishes/creamy-pasta.png" alt="Creamy Pasta" /><div class="dish-info"><h3>Creamy Pasta</h3><p><img src="assets/icons/star-rating.png" alt="" />4.5 (76)</p><div><strong>$9.49</strong><button class="add-btn" aria-label="Add Creamy Pasta"><img src="assets/icons/plus-icon.png" alt="" /></button></div></div></article>
-        <article class="dish-card" data-category="drinks" data-name="iced coffee"><img src="assets/food/dishes/iced-coffee.png" alt="Iced Coffee" /><div class="dish-info"><h3>Iced Coffee</h3><p><img src="assets/icons/star-rating.png" alt="" />4.6 (64)</p><div><strong>$3.49</strong><button class="add-btn" aria-label="Add Iced Coffee"><img src="assets/icons/plus-icon.png" alt="" /></button></div></div></article>
-        <article class="dish-card" data-category="dessert" data-name="chocolate cake"><img src="assets/food/dishes/chocolate-cake.png" alt="Chocolate Cake" /><div class="dish-info"><h3>Chocolate Cake</h3><p><img src="assets/icons/star-rating.png" alt="" />4.8 (55)</p><div><strong>$4.49</strong><button class="add-btn" aria-label="Add Chocolate Cake"><img src="assets/icons/plus-icon.png" alt="" /></button></div></div></article>
-        <article class="dish-card" data-category="salad" data-name="caesar salad"><img src="assets/food/dishes/caesar-salad.png" alt="Caesar Salad" /><div class="dish-info"><h3>Caesar Salad</h3><p><img src="assets/icons/star-rating.png" alt="" />4.4 (40)</p><div><strong>$6.49</strong><button class="add-btn" aria-label="Add Caesar Salad"><img src="assets/icons/plus-icon.png" alt="" /></button></div></div></article>
-      </div>
+    <section class="section page-shell">
+      <div class="section-head"><h2>Popular Picks</h2><a href="HTML/menu.html">View all &rsaquo;</a></div>
+      <div class="product-grid" id="homePicks"></div>
     </section>
 
-    <section class="section restaurants-section" id="about">
-      <div class="section-head"><h2>Featured Restaurants</h2><a href="#about">View All <img src="assets/icons/view-arrow.png" alt="" /></a></div>
-      <div class="restaurant-grid">
-        <article class="restaurant-card"><button class="save-btn" aria-label="Save Burger House"></button><img src="assets/food/dishes/cheese-burger.png" alt="Burger House meal" /><div class="restaurant-info"><img src="assets/brand/logo-mark.png" alt="" /><div><h3>Burger House</h3><p><span>4.6</span> &bull; 25-35 Min</p><small>Free Delivery</small></div></div></article>
-        <article class="restaurant-card"><button class="save-btn" aria-label="Save Pizza Palace"></button><img src="assets/food/dishes/margherita-pizza.png" alt="Pizza Palace pizza" /><div class="restaurant-info"><img src="assets/brand/logo-mark-large.png" alt="" /><div><h3>Pizza Palace</h3><p><span>4.5</span> &bull; 20-30 Min</p><small>Free Delivery</small></div></div></article>
-        <article class="restaurant-card"><button class="save-btn" aria-label="Save Green Bowl"></button><img src="assets/food/dishes/caesar-salad.png" alt="Green Bowl salad" /><div class="restaurant-info"><img src="assets/food/categories/salad.png" alt="" /><div><h3>Green Bowl</h3><p><span>4.7</span> &bull; 15-25 Min</p><small>Free Delivery</small></div></div></article>
-        <article class="restaurant-card"><button class="save-btn" aria-label="Save Wok Express"></button><img src="assets/food/dishes/creamy-pasta.png" alt="Wok Express noodles" /><div class="restaurant-info"><img src="assets/food/categories/pizza.png" alt="" /><div><h3>Wok Express</h3><p><span>4.4</span> &bull; 25-35 Min</p><small>Free Delivery</small></div></div></article>
+    <section class="offer-banner page-shell">
+      <div class="offer-badge">SPECIAL<br />OFFER</div>
+      <div>
+        <h2>Get 20% OFF on your first order!</h2>
+        <p>Use code: <strong>FOODDEE20</strong></p>
+        <small>*T&amp;C apply</small>
       </div>
+      <img src="assets/food/hero/offer-noodles.png" alt="Fooddee offer noodles" />
     </section>
 
-    <section class="promo-banner">
-      <div class="promo-copy">
-        <img class="promo-dots" src="assets/decor/orange-dot-pattern-large.png" alt="" />
-        <p>Limited Time Offer</p>
-        <h2>Get <span>20% OFF</span><br />on your first order!</h2>
-        <div class="promo-actions"><span>Use code: <strong>FOODDEE20</strong></span><a href="#orders">Order Now</a></div>
-      </div>
-      <div class="promo-food">
-        <img class="promo-leaf" src="assets/offer/basil.png" alt="" />
-        <img class="promo-fries" src="assets/offer/fries.png" alt="" />
-        <img class="promo-burger" src="assets/offer/burger.png" alt="Burger offer" />
-        <img class="promo-drink" src="assets/offer/iced-cola.png" alt="Iced drink" />
-        <img class="promo-badge" src="assets/offer/discount-circle.png" alt="20% off" />
-      </div>
-    </section>
-
-    <section class="how-it-works">
-      <div class="center-title"><img src="assets/decor/small-leaf-sprig.png" alt="" /><h2>How It Works</h2><img src="assets/decor/small-leaf-sprig.png" alt="" /></div>
-      <div class="steps">
-        <article class="step-card"><div class="step-icon"><img src="assets/process/search.png" alt="" /></div><span>1</span><h3>Choose Your Food</h3><p>Browse from a wide range of restaurants and cuisines.</p></article>
-        <article class="step-card"><div class="step-icon"><img src="assets/process/shopping-bag.png" alt="" /></div><span>2</span><h3>Place Your Order</h3><p>Add to cart and place your order in a few clicks.</p></article>
-        <article class="step-card"><div class="step-icon"><img src="assets/process/scooter.png" alt="" /></div><span>3</span><h3>We Deliver Fast</h3><p>Our rider will pick up and deliver to your doorstep.</p></article>
-        <article class="step-card"><div class="step-icon"><img src="assets/process/check.png" alt="" /></div><span>4</span><h3>Enjoy Your Meal</h3><p>Enjoy fresh, hot and delicious food with your loved ones.</p></article>
-      </div>
-    </section>
-
-    <section class="section testimonials">
-      <div class="section-head"><h2>What Our Customers Say</h2><a href="#contact">View All <img src="assets/icons/view-arrow.png" alt="" /></a></div>
-      <div class="testimonial-grid">
-        <article class="testimonial-card"><img class="person" src="assets/testimonials/sarah-johnson.png" alt="Sarah Johnson" /><div><h3>Sarah Johnson</h3><p class="rating">5.0</p></div><img class="quote" src="assets/testimonials/quote-mark.png" alt="" /><p>Fooddee never disappoints! The food is always fresh, tasty, and delivered on time.</p></article>
-        <article class="testimonial-card"><img class="person" src="assets/testimonials/michael-brown.png" alt="Michael Brown" /><div><h3>Michael Brown</h3><p class="rating">5.0</p></div><img class="quote" src="assets/testimonials/quote-mark.png" alt="" /><p>Great variety of restaurants and super fast delivery. Highly recommended!</p></article>
-        <article class="testimonial-card"><img class="person" src="assets/testimonials/priya-sharma.png" alt="Priya Sharma" /><div><h3>Priya Sharma</h3><p class="rating">5.0</p></div><img class="quote" src="assets/testimonials/quote-mark.png" alt="" /><p>My go-to app for all my food cravings. Excellent service and amazing food!</p></article>
-      </div>
-    </section>
-
-    <section class="app-panel" id="contact">
-      <div class="download-block">
-        <h2>Download the Fooddee App</h2>
-        <p>Get exclusive offers and faster experience!</p>
-        <div class="store-links">
-          <a href="#" aria-label="Download on Google Play"><img src="assets/app/google-play.png" alt="Get it on Google Play" /></a>
-          <a href="#" aria-label="Download on the App Store"><img src="assets/app/app-store.png" alt="Download on the App Store" /></a>
-        </div>
-        <img class="phone-mockup" src="assets/app/phone-mockup.png" alt="Fooddee mobile app" />
-      </div>
-      <div class="newsletter-block">
-        <h2>Subscribe to our Newsletter</h2>
-        <p>Get the best deals, new cuisine updates and exclusive offers.</p>
-        <form class="subscribe-form" id="subscribeForm">
-          <input type="email" placeholder="Enter your email" aria-label="Email address" required />
-          <button type="submit">Subscribe <img src="assets/icons/paper-plane-send.png" alt="" /></button>
-        </form>
-      </div>
-      <div class="stats-grid">
-        <div><img src="assets/stats/restaurant-customers.png" alt="" /><strong>500+</strong><span>Happy Customers</span></div>
-        <div><img src="assets/stats/daily-orders-bag.png" alt="" /><strong>100+</strong><span>Daily Orders</span></div>
-        <div><img src="assets/stats/chef-hat.png" alt="" /><strong>50+</strong><span>Best Chefs</span></div>
-        <div><img src="assets/stats/top-restaurants.png" alt="" /><strong>20+</strong><span>Top Restaurants</span></div>
+    <section class="steps-line page-shell">
+      <h2><img src="assets/decor/tiny-leaf.png" alt="" />How It Works<img src="assets/decor/tiny-leaf.png" alt="" /></h2>
+      <div class="steps-grid compact">
+        <article><span>1</span><img src="assets/icons/menu-list.png" alt="" /><div><h3>Choose Your Food</h3><p>Browse menu and pick your favorite food</p></div></article>
+        <article><span>2</span><img src="assets/icons/receipt-check.png" alt="" /><div><h3>Place Your Order</h3><p>Add to cart and pay securely online</p></div></article>
+        <article><span>3</span><img src="assets/icons/delivery-scooter.png" alt="" /><div><h3>Get It Delivered</h3><p>We deliver hot and fresh food to your door</p></div></article>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <img src="assets/brand/full-logo.png" alt="Fooddee" />
-        <p>Fooddee is your ultimate food ordering companion. Discover the best restaurants, enjoy exclusive deals and get food delivered fast to your door.</p>
-        <div class="social-links">
-          <a href="#" aria-label="Facebook"><img src="assets/social/facebook.png" alt="" /></a>
-          <a href="#" aria-label="Instagram"><img src="assets/social/instagram.png" alt="" /></a>
-          <a href="#" aria-label="X"><img src="assets/social/x.png" alt="" /></a>
-          <a href="#" aria-label="YouTube"><img src="assets/social/youtube.png" alt="" /></a>
-        </div>
-      </div>
-      <nav class="footer-links" aria-label="Quick links">
-        <h3>Quick Links</h3>
-        <a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">About Us</a><a href="#orders">Orders</a><a href="#contact">Contact</a>
-      </nav>
-      <nav class="footer-links" aria-label="Cuisines">
-        <h3>Cuisines</h3>
-        <a href="#menu">Italian</a><a href="#menu">Chinese</a><a href="#menu">Indian</a><a href="#menu">Mexican</a><a href="#menu">Healthy Food</a>
-      </nav>
-      <nav class="footer-links" aria-label="Support">
-        <h3>Support</h3>
-        <a href="#">Help Center</a><a href="#">FAQs</a><a href="#">Shipping &amp; Delivery</a><a href="#">Terms &amp; Conditions</a><a href="#">Privacy Policy</a>
-      </nav>
-      <div class="footer-contact">
-        <h3>Contact Us</h3>
-        <p><img src="assets/contact/location-pin.png" alt="" />123 Food Street, Flavor Town, New York, NY 10001</p>
-        <p><img src="assets/contact/phone.png" alt="" />+1 (123) 456-7890</p>
-        <p><img src="assets/contact/email.png" alt="" />hello@fooddee.com</p>
-        <p><img src="assets/icons/clock-outline.png" alt="" />Mon - Sun: 9:00 AM - 11:00 PM</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2024 Fooddee. All rights reserved.</p>
-      <div class="payment-links">
-        <img src="assets/payments/visa.png" alt="Visa" />
-        <img src="assets/payments/mastercard.png" alt="Mastercard" />
-        <img src="assets/payments/paypal.png" alt="PayPal" />
-        <img src="assets/payments/apple-pay.png" alt="Apple Pay" />
-        <img src="assets/payments/google-pay.png" alt="Google Pay" />
-      </div>
-    </div>
-  </footer>
+  <footer class="site-footer"></footer>
+  <div id="authMount"></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <div class="toast" id="toast" role="status" aria-live="polite">Added to cart</div>
-  <script src="js/main.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/home.js"></script>
 </body>
 </html>

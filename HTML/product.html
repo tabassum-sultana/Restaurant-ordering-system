@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <base href="../" />
+  <title>Product - Fooddee</title>
+  <link rel="icon" type="image/png" href="assets/brand/logo-mark.png" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/product.css" />
+</head>
+<body data-page="product">
+  <header class="site-header">
+    <a class="brand" href="index.html"><img src="assets/brand/logo.png" alt="Fooddee" /></a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="index.html">Home</a><a href="HTML/menu.html">Menu</a><a href="HTML/about.html">About</a><a href="HTML/contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <label class="search-box"><span aria-hidden="true"></span><input id="globalSearch" type="search" placeholder="Search for food..." /></label>
+      <a class="cart-button" href="HTML/cart.html"><img src="assets/icons/cart.png" alt="" /><span data-cart-count>0</span></a>
+      <button class="sign-in" type="button" data-open-auth><img src="assets/icons/user.png" alt="" />Sign In</button>
+    </div>
+  </header>
+  <main class="page-shell">
+    <nav class="crumbs"><a href="index.html">Home</a><span>&rsaquo;</span><a href="HTML/menu.html" id="productCategoryCrumb">Burgers</a><span>&rsaquo;</span><strong id="productCrumb">Product</strong></nav>
+    <section class="product-detail" id="productDetail"></section>
+    <section class="service-strip" aria-label="Fooddee benefits">
+      <article><img src="assets/icons/delivery-fast.png" alt="" /><div><h3>Fast Delivery</h3><p>Quick delivery to your doorstep</p></div></article>
+      <article><img src="assets/icons/fresh-leaf.png" alt="" /><div><h3>Fresh Ingredients</h3><p>Made with quality and fresh ingredients</p></div></article>
+      <article><img src="assets/icons/safe-secure.png" alt="" /><div><h3>Safe & Secure</h3><p>Hygienic packaging you can trust</p></div></article>
+      <article><img src="assets/icons/support-247.png" alt="" /><div><h3>24/7 Support</h3><p>We're here to help you anytime</p></div></article>
+    </section>
+    <section class="section"><div class="section-head"><h2>You Might Also Like</h2><a href="HTML/menu.html">View all &rsaquo;</a></div><div class="product-grid" id="relatedProducts"></div></section>
+  </main>
+  <footer class="site-footer"></footer>
+  <div id="authMount"></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>

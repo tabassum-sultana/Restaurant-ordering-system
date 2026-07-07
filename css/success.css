@@ -1,0 +1,160 @@
+.success-page {
+  position: relative;
+  z-index: 0;
+  padding-top: 74px;
+  text-align: center;
+  overflow: hidden;
+}
+.success-page > * {
+  position: relative;
+  z-index: 1;
+}
+.success-page::before {
+  content: "";
+  position: absolute;
+  left: -72px;
+  top: 94px;
+  width: 220px;
+  height: 260px;
+  background: url("../assets/decor/outline-leaf.png") center / contain no-repeat;
+  opacity: 0.32;
+}
+.success-page::after {
+  content: "";
+  position: absolute;
+  right: -24px;
+  top: 70px;
+  width: 520px;
+  height: 360px;
+  border-radius: 48% 52% 48% 52% / 52% 44% 56% 48%;
+  background: rgba(237, 247, 229, 0.68);
+  transform: rotate(-7deg);
+  z-index: 0;
+}
+.success-icon {
+  width: 138px;
+  height: 138px;
+  margin: 0 auto 32px;
+  object-fit: contain;
+}
+.success-page h1 {
+  margin: 0 auto 20px;
+  font-size: clamp(52px, 6.7vw, 82px);
+  line-height: 1.1;
+}
+.success-page h1 span {
+  color: var(--green);
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 10px;
+}
+.success-page > p {
+  max-width: 600px;
+  margin: 0 auto 64px;
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.55;
+}
+.order-facts {
+  margin-bottom: 44px;
+  padding: 26px 20px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(23, 42, 24, 0.045);
+}
+.order-facts article {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+}
+.order-facts article:not(:last-child) { border-right: 1px solid var(--line); }
+.order-facts img { width: 42px; height: 42px; object-fit: contain; }
+.order-facts span { color: var(--muted); }
+.order-facts strong { font-size: 18px; }
+.tracking-panel {
+  padding: 38px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(23, 42, 24, 0.045);
+  text-align: left;
+}
+.tracking-panel h2 { margin: 0 0 34px; font-size: 29px; }
+.tracking-steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  text-align: center;
+}
+.tracking-steps::before {
+  content: "";
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  top: 42px;
+  height: 5px;
+  background: linear-gradient(90deg, var(--green) 25%, var(--line) 25%);
+}
+.tracking-steps article { position: relative; z-index: 1; }
+.tracking-steps img {
+  width: 86px;
+  height: 86px;
+  margin: 0 auto 12px;
+  padding: 19px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: #f7f7f7;
+  border: 1px solid var(--line);
+}
+.tracking-steps article.active img { background: var(--green); filter: brightness(0) invert(1); }
+.tracking-steps span {
+  width: 28px;
+  height: 28px;
+  margin: 0 auto 12px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #eef0ee;
+  color: var(--muted);
+  font-weight: 900;
+}
+.tracking-steps .active span { background: var(--green); color: #fff; }
+.tracking-steps h3 { margin: 0 0 8px; }
+.tracking-steps p { margin: 0; color: var(--muted); line-height: 1.45; }
+.eta-box {
+  width: min(670px, 100%);
+  margin: 38px auto 32px;
+  padding: 24px 34px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 28px;
+  text-align: left;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(23, 42, 24, 0.045);
+}
+.eta-box img { width: 86px; height: 86px; object-fit: contain; }
+.eta-box h2 { margin: 0 0 8px; }
+.eta-box strong { color: var(--green); font-size: 32px; }
+.eta-box p { margin: 8px 0 0; color: var(--muted); }
+.success-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+@media (max-width: 850px) {
+  .order-facts,
+  .tracking-steps { grid-template-columns: 1fr; }
+  .order-facts article:not(:last-child) { border-right: 0; border-bottom: 1px solid var(--line); padding-bottom: 16px; }
+  .tracking-steps::before { display: none; }
+}
+@media (max-width: 620px) {
+  .tracking-panel { padding: 24px; }
+  .eta-box { flex-direction: column; text-align: center; }
+}
